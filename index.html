@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo-128x128.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script defer src="js/libs/md2.min.js"></script>
+    <script defer src="js/libs/md4.min.js"></script>
+    <script defer src="js/libs/md5.min.js"></script>
+    <script defer src="js/libs/sha1.min.js"></script>
+    <script defer src="js/libs/sha224.min.js"></script>
+    <script defer src="js/libs/sha256.min.js"></script>
+    <script defer src="js/libs/sha384.min.js"></script>
+    <script defer src="js/libs/sha512.min.js"></script>
+    <script defer src="js/libs/sha512-224.min.js"></script>
+    <script defer src="js/libs/sha512-256.min.js"></script>
+    <script defer src="js/libs/sha3-224.min.js"></script>
+    <script defer src="js/libs/sha3-256.min.js"></script>
+    <script defer src="js/libs/sha3-384.min.js"></script>
+    <script defer src="js/libs/sha3-512.min.js"></script>
+    <script defer src="js/libs/shake128.min.js"></script>
+    <script defer src="js/libs/shake256.min.js"></script>
+    <script defer src="js/libs/base32.min.js"></script>
+    <script defer src="js/main.min.js"></script>
+    <title>Hash</title>
+</head>
+
+<body class="container text-center font-monospace">
+    <header>
+        <h1 class="mt-4 mb-3">Hash</h1>
+    </header>
+    <main>
+        <h2 class="text-start">Text / File</h2>
+        <div class="row">
+            <div class="col-lg-3" id="hash-algorithm-div">
+                <div class="mb-3 form-floating">
+                    <select name="hash-algorithm-select" id="hash-algorithm-select" class="form-select"></select>
+                    <label for="hash-algorithm-select" class="form-label">Algorithm</label>
+                </div>
+            </div>
+            <div class="col-lg-3" id="hash-encoding-div">
+                <div class="mb-3 form-floating">
+                    <select name="hash-encoding-select" id="hash-encoding-select" class="form-select"></select>
+                    <label for="hash-encoding-select" class="form-label">Encoding</label>
+                </div>
+            </div>
+            <div class="col-lg-3" id="hash-rounds-div">
+                <div class="mb-3 form-floating">
+                    <input type="number" name="hash-rounds-input" id="hash-rounds-input" class="form-control">
+                    <label for="hash-rounds-input" class="form-label">Rounds</label>
+                </div>
+            </div>
+            <div class="col-lg-3" id="hash-output-length-div">
+                <div class="mb-3 form-floating">
+                    <input type="number" name="hash-output-length-input" id="hash-output-length-input" class="form-control" step="8">
+                    <label id="hash-output-length-label" class="form-label" for="hash-output-length-input">Output Length (bits)</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3 form-floating">
+                    <textarea name="text-textarea" id="text-textarea" class="form-control"
+                        spellcheck="false"></textarea>
+                    <label for="text-textarea" class="form-label">Text</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <input type="file" name="file-input" id="file-input" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <h2 class="text-start">Checksum</h2>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3 form-floating">
+                    <input type="text" name="checksum-input" id="checksum-input" class="form-control" spellcheck="false"
+                        readonly>
+                    <label for="checksum-input" id="checksum-input-label" class="form-label">-</label>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
